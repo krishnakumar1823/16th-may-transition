@@ -1,0 +1,52 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+} 
+.href{
+	overflow:hidden;
+}
+.href1{
+	height:40px;
+	width:100px;
+	padding:10px;
+	border:1px solid red;
+	border-radius:22px;
+	position:relative;
+	top:10vh;
+	left:40%;
+	overflow:hidden;
+}
+a{
+	text-decoration:none;
+	color:white;
+	padding:5px;
+}
+.href1 .atag::before{
+	content:'';
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:black;
+	border-radius:22px;
+	height:40px;
+	width:100px;
+	z-index:-1;
+} 
+.href1 .atag::after{
+	content:'';
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:red;
+	border-radius:22px;
+	height:40px;
+	width:100px;
+	z-index:-1;
+} 
+.href1:hover .atag::after{
+	transition:all 0.6s ease-out;
+	position:absolute;
+	top:0;
+	left:100px; 
+}
